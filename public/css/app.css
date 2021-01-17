@@ -1,0 +1,49 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.rekomendasi-btn {
+    /* font-family: Hack, monospace; */
+    background: #7cfd3b;
+    color: #1d1d1d;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 1.5rem;
+    border: 0;
+    transition: all 0.5s;
+    border-radius: 10px;
+    width: auto;
+    text-decoration: none !important;
+}
+
+.rekomendasi-btn::after {
+    font-weight: 400;
+    opacity: 0%;
+}
+.rekomendasi-btn:hover {
+    background: #3535f5;
+    transition: all 0.5s;
+    border-radius: 10px;
+    padding: 1.5rem 10rem 1.5rem 10rem;
+    color: #ffffff;
+}
+.rekomendasi-btn:hover::after {
+    opacity: 100%;
+    transition: all 0.5s;
+    color: #ffffff;
+    margin-left: 5%;
+}
